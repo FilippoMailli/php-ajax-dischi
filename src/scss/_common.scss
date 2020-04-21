@@ -1,0 +1,15 @@
+.clearfix::after {
+    @include clearfix;
+}
+
+.sx {
+    float: left;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+body {
+    overflow-x: hidden;
+}
