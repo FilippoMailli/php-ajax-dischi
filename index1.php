@@ -30,18 +30,7 @@
         <main>
             <div class="container clearfix">
                 <div class="card-container">
-                    <?php
-                        include 'data.php';
-                    ?>
-
-                    <?php foreach ($responses as $key => $response) { ?>
-                        <div class="card">
-                        <img src="<?php echo $response['poster']; ?>" alt="poster">
-                        <h4><?php echo $response['title'];?></h4>
-                        <span><?php echo $response['author'];?></span>
-                        <span><?php echo $response['year'];?></span>
-                        </div>
-                    <?php } ?>
+                    
                 </div>
             </div>
         </main>
@@ -57,7 +46,15 @@
             </div>
         </footer>
 
-        <script src="dist/js/main.js" charset="utf-8"></script>
+
+        <script id="card-template" type="text/x-handlebars-template">
+            <div class="card">
+                <img src="{{sourceAlbum}}" alt="{{album}}">
+                <h4>{{album}}</h4>
+                <span>{{artista}}</span>
+                <span>{{anno}}</span>
+            </div>
+        </script>
 
         <script src="dist/js/main.js" charset="utf-8"></script>
 
